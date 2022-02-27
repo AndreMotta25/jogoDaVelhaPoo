@@ -70,6 +70,7 @@
             if (_tabuleiro.Venceu())
             {
                 Console.WriteLine($"Parabens jogador {_jogadores[_jogadorDaVez].Nome}");
+                _jogadores[_jogadorDaVez].Pontos += 1;
                 _playing = false;
                 Continuar();
 
@@ -82,6 +83,9 @@
         }
         private void Continuar()
         {
+            Console.WriteLine();
+            Console.WriteLine("======================================");
+            Console.WriteLine($"O placar esta {_jogadores[0].Nome}: {_jogadores[0].Pontos} | {_jogadores[1].Nome}: {_jogadores[1].Pontos}  ");
             Console.WriteLine("O jogo terminou, deseja comecar novamente ? (s) ou (n)");
             string decisao = Console.ReadLine();
             if(decisao == "s") {
