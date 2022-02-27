@@ -1,0 +1,4 @@
+# ignore an entire directory
+bin/
+obj/
+.vs/
