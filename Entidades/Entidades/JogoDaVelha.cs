@@ -82,10 +82,14 @@
         }
         private void Continuar()
         {
-            // quer continuar ? sim 
-            // InitGame();
-            // quer continuar ? nao 
-            // mensagem de saida
+            Console.WriteLine("O jogo terminou, deseja comecar novamente ? (s) ou (n)");
+            string decisao = Console.ReadLine();
+            if(decisao == "s") {
+                InitGame();
+            }
+            else {
+                Console.WriteLine("Adeus");
+            }
         }
     }
 }

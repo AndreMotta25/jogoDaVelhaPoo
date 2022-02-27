@@ -15,6 +15,7 @@ namespace Entidades
         public void InitBoard()
         {
             _posicoes = new List<string>();
+             _posicoesPreenchidas = new List<int>();
             for (int i = 0; i < 9; i++)
             {
                 _posicoes.Add($"{i + 1}");
@@ -36,8 +37,6 @@ namespace Entidades
                     Console.WriteLine("Lamento mas a casa que voce escolheu ja esta preenchida");
                     Console.WriteLine("Digite qualquer tecla para jogar novamente");
                     Console.ReadKey();
-                    //Console.WriteLine($"Quem joga e {jogador.Nome}");
-                    //RenderingBoard();
                     Console.WriteLine("Digite o numero da casa que voce deseja preencher:");
                     posicao = int.Parse(Console.ReadLine());
                 }
