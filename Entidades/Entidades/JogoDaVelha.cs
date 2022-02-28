@@ -79,6 +79,7 @@
             {
                 _playing = false;
                 Console.WriteLine("O jogo deu velha");
+                Continuar();
             }
         }
         private void Continuar()
@@ -88,10 +89,12 @@
             Console.WriteLine($"O placar esta {_jogadores[0].Nome}: {_jogadores[0].Pontos} | {_jogadores[1].Nome}: {_jogadores[1].Pontos}  ");
             Console.WriteLine("O jogo terminou, deseja comecar novamente ? (s) ou (n)");
             string decisao = Console.ReadLine();
-            if(decisao == "s") {
+            if (decisao == "s")
+            {
                 InitGame();
             }
-            else {
+            else
+            {
                 Console.WriteLine("Adeus");
             }
         }
